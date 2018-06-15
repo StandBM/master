@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.zb.entity"></package>
+    </typeAliases>
+    <mappers>
+        <mapper resource="com\zb\dao\StudentMapper.xml"></mapper>
+        <mapper resource="com\zb\dao\ClassMapper.xml"></mapper>
+    </mappers>
+</configuration>

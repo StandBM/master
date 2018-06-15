@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zb.dao.StudentDao">
+
+    <select id="findAll" resultType="com.zb.entity.Student">
+        select stu_name as stuName,student.id as id,class_id as classId,class.class_name as className from student
+        inner join class on(student.class_id = class.id)
+    </select>
+    <insert id="insert" parameterType="Student">
+        insert into student (stu_name,class_id) value (#{stuName},#{classId});
+    </insert>
+</mapper>
